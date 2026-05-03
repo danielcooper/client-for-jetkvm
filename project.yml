@@ -36,6 +36,8 @@ targets:
         INFOPLIST_KEY_CFBundleDisplayName: Client for JetKVM
         INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
         INFOPLIST_KEY_NSLocalNetworkUsageDescription: "JetKVM needs local network access to discover and connect to KVM devices on your network."
+        INFOPLIST_KEY_NSCameraUsageDescription: "JetKVM uses WebRTC which references the camera API, but this app does not access your camera."
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: "JetKVM uses WebRTC which references the microphone API, but this app does not access your microphone."
         INFOPLIST_KEY_NSBonjourServices: "_http._tcp"
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations: "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait"
