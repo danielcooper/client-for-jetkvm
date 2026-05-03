@@ -27,7 +27,11 @@ struct KVMView: View {
 
     var body: some View {
         ZStack {
-            Color.black.ignoresSafeArea()
+            #if os(iOS)
+            Color(uiColor: .systemBackground).ignoresSafeArea()
+            #else
+            Color(nsColor: .windowBackgroundColor).ignoresSafeArea()
+            #endif
 
             switch viewModel.state {
             case .disconnected:
@@ -43,7 +47,7 @@ struct KVMView: View {
                     ProgressView()
                         .controlSize(.large)
                     Text(viewModel.state.label)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.primary)
                 }
 
             case .connected:
@@ -124,7 +128,7 @@ struct KVMView: View {
         VStack(spacing: 16) {
             Image(systemName: "play.circle")
                 .font(.system(size: 48))
-                .foregroundStyle(.white.opacity(0.6))
+                .foregroundStyle(.secondary)
             Button("Connect") {
                 viewModel.connect(to: device)
             }
@@ -166,7 +170,7 @@ struct KVMView: View {
                 .font(.system(size: 48))
                 .foregroundStyle(.yellow)
             Text(message)
-                .foregroundStyle(.white)
+                .foregroundStyle(.primary)
                 .multilineTextAlignment(.center)
             Button("Retry") {
                 viewModel.connect(to: device)
