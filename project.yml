@@ -30,6 +30,7 @@ targets:
         SWIFT_VERSION: "6.0"
         CODE_SIGN_STYLE: Automatic
         DEVELOPMENT_TEAM: F3CB625F85
+        ENABLE_HARDENED_RUNTIME: YES
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_KEY_CFBundleDisplayName: Client for JetKVM
         INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
