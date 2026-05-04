@@ -4,6 +4,8 @@
 
 A native iPadOS and macOS client for connecting to JetKVM devices, providing remote video, keyboard, and mouse control.
 
+![Screenshot](screenshot.png)
+
 ## Features
 
 -	Input Support: Sends touches, clicks, and keystrokes to the remote machine. Supports both on-screen and external hardware keyboards.
